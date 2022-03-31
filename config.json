@@ -1,0 +1,16 @@
+{
+    "refresh_interval": "10000",
+    "global_pop": {
+        "token": ""
+    },
+    "servers": [
+        {
+            "token": "",
+            "battlemetrics_serverid": ""
+        },
+        {
+            "token": "",
+            "battlemetrics_serverid": ""
+        }
+    ]
+}
