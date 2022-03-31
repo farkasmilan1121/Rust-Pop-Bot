@@ -12,5 +12,13 @@
   "dependencies": {
     "discord.js": "^13.6.0",
     "node-fetch": "^3.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farkasmilan1121/Rust-Pop-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/farkasmilan1121/Rust-Pop-Bot/issues"
+  },
+  "homepage": "https://github.com/farkasmilan1121/Rust-Pop-Bot#readme"
 }
