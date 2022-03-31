@@ -2,6 +2,16 @@ import Discord from "discord.js";
 import fetch from "node-fetch";
 import { createRequire } from "module";
 const config = createRequire(import.meta.url)("./config.json");
+let totalPlayers = [];
+const client = new Discord.Client({
+    intents: [], presence: {
+        status: "idle",
+        activities: [{
+            name: "Loading..",
+            type: "WATCHING"
+        }]
+    }
+});
 
 for (let i = 0; i < config.servers.length; i++) {
     const client = new Discord.Client({
@@ -53,18 +63,6 @@ for (let i = 0; i < config.servers.length; i++) {
 
     client.login(config.servers[i].token);
 }
-
-let totalPlayers = [];
-
-const client = new Discord.Client({
-    intents: [], presence: {
-        status: "idle",
-        activities: [{
-            name: "Loading..",
-            type: "WATCHING"
-        }]
-    }
-});
 
 client.on('ready', () => {
     console.log(`Connected to ${client.user.tag}`);
