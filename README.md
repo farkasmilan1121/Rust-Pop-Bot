@@ -7,6 +7,7 @@ A discord.js bot that is capable to display player count and total player count 
 Install [node.js](https://nodejs.org/en/)
 Download the repository  
 Create one [discord bot](https://discord.com/developers/applications) for each of your servers and one for the global player count.  
+Invite the bots to your server.
 Open powershell in the project's folder and run **npm install**  
 **Rename config.example.json to config.json**  
 Insert discord bot tokens and battlemetrics server ids, that can be found here:  
