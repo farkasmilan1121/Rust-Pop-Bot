@@ -3,16 +3,8 @@ import fetch from "node-fetch";
 import { createRequire } from "module";
 const config = createRequire(import.meta.url)("./config.json");
 let totalPlayers = [];
-const client = new Discord.Client({
-    intents: [], presence: {
-        status: "idle",
-        activities: [{
-            name: "Loading..",
-            type: "WATCHING"
-        }]
-    }
-});
 
+// ---- Server Bots ----
 for (let i = 0; i < config.servers.length; i++) {
     const client = new Discord.Client({
         intents: [], presence: {
@@ -63,6 +55,16 @@ for (let i = 0; i < config.servers.length; i++) {
 
     client.login(config.servers[i].token);
 }
+// ---- Total Pop Bot ----
+const client = new Discord.Client({
+    intents: [], presence: {
+        status: "idle",
+        activities: [{
+            name: "Loading..",
+            type: "WATCHING"
+        }]
+    }
+});
 
 client.on('ready', () => {
     console.log(`Connected to ${client.user.tag}`);
