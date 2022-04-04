@@ -68,14 +68,11 @@ for (let i = 0; i < config.servers.length; i++) {
             }]
         }
     });
-    clients.push(client);
-}
-
-for (let i = 0; i < config.servers.length; i++) {
-    clients[i].on('ready', () => {
-        console.log(`Connected to ${clients[i].user.tag}`);
+    client.on('ready', () => {
+        console.log(`Connected to ${client.user.tag}`);
+        clients.push(client);
     })
-    clients[i].login(config.servers[i].token)
+    client.login(config.servers[i].token); 
 }
 
 // ---- Total Pop Bot ----
