@@ -1,11 +1,12 @@
 import Discord from "discord.js";
 import fetch from "node-fetch";
 import { createRequire } from "module";
+import { setInterval } from "timers/promises";
 const config = createRequire(import.meta.url)("./config.json");
 let totalPlayers = [];
-
+let clients = [];
 // ---- Server Bots ----
-for (let i = 0; i < config.servers.length; i++) {
+/*for (let i = 0; i < config.servers.length; i++) {
     const client = new Discord.Client({
         intents: [], presence: {
             status: "idle",
@@ -54,7 +55,29 @@ for (let i = 0; i < config.servers.length; i++) {
     }, config.refresh_interval);
 
     client.login(config.servers[i].token);
+}*/
+
+
+for (let i = 0; i < config.servers.length; i++) {
+    const client = new Discord.Client({
+        intents: [], presence: {
+            status: "idle",
+            activities: [{
+                name: "Loading..",
+                type: "WATCHING"
+            }]
+        }
+    });
+    clients.push(client);
 }
+
+for (let i = 0; i < config.servers.length; i++) {
+    clients[i].on('ready', () => {
+        console.log(`Connected to ${clients[i].user.tag}`);
+    })
+    clients[i].login(config.servers[i].token)
+}
+
 // ---- Total Pop Bot ----
 const client = new Discord.Client({
     intents: [], presence: {
