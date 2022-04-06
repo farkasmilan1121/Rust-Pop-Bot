@@ -57,7 +57,7 @@ setInterval(async () => {
             clients[i].user.setPresence({
                 status: "online",
                 "activities": [{
-                    name: `${servers[i]['data']['attributes']['players']} / ${servers[i]['data']['attributes']['maxPlayers']}`,
+                    name: `${servers[i]['data']['attributes']['players']} / ${servers[i]['data']['attributes']['maxPlayers']} (${servers[i]['data']['attributes']['details']['rust_queued_players']})`,
                     type: "PLAYING"
                 }]
             });
@@ -78,7 +78,7 @@ setInterval(async () => {
                 clients[i].user.setPresence({
                     status: "online",
                     "activities": [{
-                        name: `${servers[i]['data']['attributes']['players']} / ${servers[i]['data']['attributes']['maxPlayers']} (${servers[i]['data']['attributes']['details']['rust_queued_players']})`,
+                        name: `${servers[i]['data']['attributes']['players']} / ${servers[i]['data']['attributes']['maxPlayers']}`,
                         type: "PLAYING"
                     }]
                 });
