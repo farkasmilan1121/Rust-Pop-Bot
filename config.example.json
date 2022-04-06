@@ -6,11 +6,15 @@
     "servers": [
         {
             "token": "",
-            "battlemetrics_serverid": ""
+            "battlemetrics_serverid": "",
+            "custom_text_when_pop_below": "20",
+            "custom_text": "text"
         },
         {
             "token": "",
-            "battlemetrics_serverid": ""
+            "battlemetrics_serverid": "",
+            "custom_text_when_pop_below": "20",
+            "custom_text": "text"
         }
     ]
 }
