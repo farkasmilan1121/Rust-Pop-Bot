@@ -1,0 +1,24 @@
+{
+    "refresh_interval": "10000",
+    "discord_pop":{
+        "token": "",
+        "guild_id": ""
+    },
+    "total_pop": {
+        "token": ""
+    },
+    "servers": [
+        {
+            "token": "",
+            "battlemetrics_serverid": "",
+            "custom_text_when_pop_below": "20",
+            "custom_text": "text"
+        },
+        {
+            "token": "",
+            "battlemetrics_serverid": "",
+            "custom_text_when_pop_below": "20",
+            "custom_text": "text"
+        }
+    ]
+}
