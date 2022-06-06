@@ -1,9 +1,5 @@
 {
     "refresh_interval": "10000",
-    "discord_pop":{
-        "token": "",
-        "guild_id": ""
-    },
     "total_pop": {
         "token": ""
     },
