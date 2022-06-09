@@ -1,5 +1,6 @@
 const config = require("./config.json");
 const Discord = require("discord.js");
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 let clients = [];
 
 for (let i = 0; i < config.servers.length; i++) {
