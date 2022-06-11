@@ -1,5 +1,8 @@
 {
     "refresh_interval": "10000",
+    "ServerPostInterval": "1800000",
+    "ServerOffline": "channelid",
+    "ServerOnline": "channelid",
     "total_pop": {
         "token": ""
     },
